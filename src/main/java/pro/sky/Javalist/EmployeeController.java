@@ -6,6 +6,7 @@ import pro.sky.Javalist.exception.EmployeeNotFoundException;
 import pro.sky.Javalist.exception.EmployeeStorageFullException;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/employee")
@@ -36,7 +37,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/all")
-    public List<Employee> getAllEmployees() {
+    public Map<String, Employee> getAllEmployees() {
         return employeeService.getAllEmployees();
     }
 
